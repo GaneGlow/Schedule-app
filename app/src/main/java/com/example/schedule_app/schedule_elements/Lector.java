@@ -9,4 +9,12 @@ public class Lector {
         this.name = name;
         this.discipline = discipline;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDiscipline(Discipline discipline) {
+        this.discipline = discipline;
+    }
 }

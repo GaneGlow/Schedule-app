@@ -16,6 +16,26 @@ public class Discipline {
         this.numerator = numerator;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public void setDenominator(boolean denominator) {
+        this.denominator = denominator;
+    }
+
+    public void setNumerator(boolean numerator) {
+        this.numerator = numerator;
+    }
+
     public Discipline(String name, String day, String time) {
         this(name, day, time, false, false);
     }
