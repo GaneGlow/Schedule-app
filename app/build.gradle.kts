@@ -38,6 +38,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -47,6 +50,8 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation("com.github.SUPERCILEX.poi-android:poi:$poiVersion")
     implementation("com.github.SUPERCILEX.poi-android:proguard:$poiVersion")
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     compileOnly("org.apache.poi:poi-ooxml:$poiVersion")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
