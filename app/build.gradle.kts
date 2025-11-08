@@ -1,3 +1,7 @@
+import org.gradle.kotlin.dsl.implementation
+
+val poiVersion = "3.17"
+
 plugins {
     alias(libs.plugins.android.application)
 }
@@ -8,14 +12,17 @@ android {
         version = release(36)
     }
 
+
+
     defaultConfig {
         applicationId = "com.example.schedule_app"
-        minSdk = 21
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -38,6 +45,9 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation("com.github.SUPERCILEX.poi-android:poi:$poiVersion")
+    implementation("com.github.SUPERCILEX.poi-android:proguard:$poiVersion")
+    compileOnly("org.apache.poi:poi-ooxml:$poiVersion")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
